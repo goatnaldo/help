@@ -10,13 +10,13 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     print('Server listening on', HOST, 'port', PORT)
     conn, addr = s.accept()
     print('Connected by', addr)
-    with open(r'D:\Mobile computing','file_to_send') as f:
+    with open(r'C:\Users\____\Documents\exp7\hi.txt','rb') as f:
         while True:
             data = f.read(1024)
             if not data:
                 break
             conn.sendall(data)
-    print('File sent successfully'
+    print('File sent successfully')
 
 #client
 import socket
